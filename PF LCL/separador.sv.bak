@@ -1,0 +1,16 @@
+module separador(
+    input wire [4:0] in,  // Entrada de 5 bits vinda do módulo inicial
+    output wire modo_relogio,      // Modo Relógio
+    output wire modo_cronometro,   // Modo Cronômetro
+    output wire modo_timer,        // Modo Timer
+    output wire ajuste_relogio,    // Ajuste da hora do Relógio
+    output wire ajuste_timer       // Ajuste da hora do Timer
+);
+
+assign modo_relogio = in[0];      // Primeiro bit
+assign modo_cronometro = in[1];   // Segundo bit
+assign modo_timer = in[2];        // Terceiro bit
+assign ajuste_relogio = in[3];    // Quarto bit
+assign ajuste_timer = in[4];      // Quinto bit
+
+endmodule

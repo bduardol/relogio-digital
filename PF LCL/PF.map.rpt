@@ -1,0 +1,1367 @@
+Analysis & Synthesis report for PF
+Wed Sep 18 08:35:03 2024
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod2
+ 13. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod2
+ 14. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod0
+ 15. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div2
+ 16. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div2
+ 17. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div0
+ 18. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod1
+ 19. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod1
+ 20. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod1
+ 21. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div1
+ 22. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div1
+ 23. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div1
+ 24. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod3
+ 25. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod3
+ 27. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod0
+ 28. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod2
+ 29. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div3
+ 30. Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div0
+ 31. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div3
+ 32. Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div0
+ 33. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div2
+ 34. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div3
+ 35. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod3
+ 36. Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div4
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Sep 18 08:35:03 2024           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; PF                                              ;
+; Top-level Entity Name              ; Teste                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 1,275                                           ;
+;     Total combinational functions  ; 1,233                                           ;
+;     Dedicated logic registers      ; 216                                             ;
+; Total registers                    ; 216                                             ;
+; Total pins                         ; 94                                              ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; Teste              ; PF                 ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                             ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+; inicial.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/inicial.sv                 ;         ;
+; separador.sv                     ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/separador.sv               ;         ;
+; relogio.sv                       ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/relogio.sv                 ;         ;
+; reset.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/reset.sv                   ;         ;
+; cronometro.sv                    ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/cronometro.sv              ;         ;
+; timer.sv                         ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/timer.sv                   ;         ;
+; ajuste_relogio.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/ajuste_relogio.sv          ;         ;
+; fdiv.sv                          ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/fdiv.sv                    ;         ;
+; decoder7.sv                      ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/decoder7.sv                ;         ;
+; segment_output.sv                ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/segment_output.sv          ;         ;
+; Teste.bdf                        ; yes             ; User Block Diagram/Schematic File  ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/Teste.bdf                  ;         ;
+; cronometro_centesimos.sv         ; yes             ; User SystemVerilog HDL File        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/cronometro_centesimos.sv   ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                       ; c:/program files/quartus/libraries/megafunctions/lpm_divide.tdf                ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                       ; c:/program files/quartus/libraries/megafunctions/abs_divider.inc               ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                       ; c:/program files/quartus/libraries/megafunctions/sign_div_unsign.inc           ;         ;
+; aglobal130.inc                   ; yes             ; Megafunction                       ; c:/program files/quartus/libraries/megafunctions/aglobal130.inc                ;         ;
+; db/lpm_divide_25m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_25m.tdf      ;         ;
+; db/sign_div_unsign_9kh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/sign_div_unsign_9kh.tdf ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/alt_u_div_kve.tdf       ;         ;
+; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/add_sub_lkc.tdf         ;         ;
+; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/add_sub_mkc.tdf         ;         ;
+; db/lpm_divide_vcm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_vcm.tdf      ;         ;
+; db/lpm_divide_15m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_15m.tdf      ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/sign_div_unsign_8kh.tdf ;         ;
+; db/alt_u_div_ive.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/alt_u_div_ive.tdf       ;         ;
+; db/lpm_divide_ucm.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_ucm.tdf      ;         ;
+; db/lpm_divide_aem.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_aem.tdf      ;         ;
+; db/sign_div_unsign_klh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/sign_div_unsign_klh.tdf ;         ;
+; db/alt_u_div_a2f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/alt_u_div_a2f.tdf       ;         ;
+; db/lpm_divide_d6m.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_d6m.tdf      ;         ;
+; db/lpm_divide_dem.tdf            ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/lpm_divide_dem.tdf      ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/sign_div_unsign_nlh.tdf ;         ;
+; db/alt_u_div_g2f.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/db/alt_u_div_g2f.tdf       ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimated Total logic elements              ; 1,275    ;
+;                                             ;          ;
+; Total combinational functions               ; 1233     ;
+; Logic element usage by number of LUT inputs ;          ;
+;     -- 4 input functions                    ; 334      ;
+;     -- 3 input functions                    ; 259      ;
+;     -- <=2 input functions                  ; 640      ;
+;                                             ;          ;
+; Logic elements by mode                      ;          ;
+;     -- normal mode                          ; 871      ;
+;     -- arithmetic mode                      ; 362      ;
+;                                             ;          ;
+; Total registers                             ; 216      ;
+;     -- Dedicated logic registers            ; 216      ;
+;     -- I/O registers                        ; 0        ;
+;                                             ;          ;
+; I/O pins                                    ; 94       ;
+; Embedded Multiplier 9-bit elements          ; 0        ;
+; Maximum fan-out node                        ; CLOCK_50 ;
+; Maximum fan-out                             ; 113      ;
+; Total fan-out                               ; 4018     ;
+; Average fan-out                             ; 2.60     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                      ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+; |Teste                                    ; 1233 (3)          ; 216 (0)      ; 0           ; 0            ; 0       ; 0         ; 94   ; 0            ; |Teste                                                                                                                   ; work         ;
+;    |ajuste_relogio:inst19|                ; 12 (12)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|ajuste_relogio:inst19                                                                                             ; work         ;
+;    |ajuste_relogio:inst2|                 ; 12 (12)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|ajuste_relogio:inst2                                                                                              ; work         ;
+;    |cronometro:inst07|                    ; 447 (114)         ; 72 (72)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07                                                                                                 ; work         ;
+;       |lpm_divide:Div0|                   ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div0                                                                                 ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 25 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 25 (25)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Div2|                   ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div2                                                                                 ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 12 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_ive:divider|    ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
+;       |lpm_divide:Div3|                   ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div3                                                                                 ; work         ;
+;          |lpm_divide_aem:auto_generated|  ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_klh:divider| ; 82 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
+;                |alt_u_div_a2f:divider|    ; 82 (82)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
+;       |lpm_divide:Div4|                   ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div4                                                                                 ; work         ;
+;          |lpm_divide_dem:auto_generated|  ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_nlh:divider| ; 56 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
+;                |alt_u_div_g2f:divider|    ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Mod1|                   ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod1                                                                                 ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 33 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Mod2|                   ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod2                                                                                 ; work         ;
+;          |lpm_divide_15m:auto_generated|  ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 20 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_ive:divider|    ; 20 (20)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
+;       |lpm_divide:Mod3|                   ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod3                                                                                 ; work         ;
+;          |lpm_divide_d6m:auto_generated|  ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod3|lpm_divide_d6m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_klh:divider| ; 47 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod3|lpm_divide_d6m:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
+;                |alt_u_div_a2f:divider|    ; 47 (47)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro:inst07|lpm_divide:Mod3|lpm_divide_d6m:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
+;    |cronometro_centesimos:inst16|         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|cronometro_centesimos:inst16                                                                                      ; work         ;
+;    |decoder7:inst45|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst45                                                                                                   ; work         ;
+;    |decoder7:inst46|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst46                                                                                                   ; work         ;
+;    |decoder7:inst5|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst5                                                                                                    ; work         ;
+;    |decoder7:inst6|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst6                                                                                                    ; work         ;
+;    |decoder7:inst7|                       ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst7                                                                                                    ; work         ;
+;    |decoder7:inst81|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst81                                                                                                   ; work         ;
+;    |decoder7:inst82|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst82                                                                                                   ; work         ;
+;    |decoder7:inst83|                      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|decoder7:inst83                                                                                                   ; work         ;
+;    |fdiv:inst|                            ; 57 (57)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|fdiv:inst                                                                                                         ; work         ;
+;    |inicial:inst00|                       ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|inicial:inst00                                                                                                    ; work         ;
+;    |relogio:inst03|                       ; 281 (67)          ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03                                                                                                    ; work         ;
+;       |lpm_divide:Div0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div0                                                                                    ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div1|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div1                                                                                    ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div2|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div2                                                                                    ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div3|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div3                                                                                    ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
+;       |lpm_divide:Mod0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod0                                                                                    ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Mod1|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod1                                                                                    ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Mod2|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod2                                                                                    ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Mod3|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod3                                                                                    ; work         ;
+;          |lpm_divide_15m:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
+;    |reset:inst02|                         ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|reset:inst02                                                                                                      ; work         ;
+;    |separador:inst13|                     ; 71 (71)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|separador:inst13                                                                                                  ; work         ;
+;    |timer:inst18|                         ; 281 (67)          ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18                                                                                                      ; work         ;
+;       |lpm_divide:Div0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div0                                                                                      ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Div1|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div1                                                                                      ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Div2|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div2                                                                                      ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Div3|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div3                                                                                      ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                            ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider      ; work         ;
+;       |lpm_divide:Mod0|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod0                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod1|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod1                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod2|                   ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod2                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod3|                   ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod3                                                                                      ; work         ;
+;          |lpm_divide_15m:auto_generated|  ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod3|lpm_divide_15m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                            ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Teste|timer:inst18|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider      ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                               ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal                ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------------+------------------------+
+; ajuste_relogio:inst2|sec_units[0]                   ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_units[0]                  ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_units[1]                   ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_units[1]                  ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_units[2]                   ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_units[2]                  ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_units[3]                   ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_units[3]                  ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_tens[0]                    ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_tens[0]                   ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_tens[1]                    ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_tens[1]                   ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_tens[2]                    ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_tens[2]                   ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|sec_tens[3]                    ; ajuste_relogio:inst2|sec_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|sec_tens[3]                   ; ajuste_relogio:inst19|sec_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_units[0]                   ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_units[0]                  ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_units[1]                   ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_units[1]                  ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_units[2]                   ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_units[2]                  ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_units[3]                   ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_units[3]                  ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_tens[0]                    ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_tens[0]                   ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_tens[1]                    ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_tens[1]                   ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_tens[2]                    ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_tens[2]                   ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|min_tens[3]                    ; ajuste_relogio:inst2|min_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|min_tens[3]                   ; ajuste_relogio:inst19|min_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_units[0]                   ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_units[0]                  ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_units[1]                   ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_units[1]                  ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_units[2]                   ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_units[2]                  ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_units[3]                   ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_units[3]                  ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_tens[0]                    ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_tens[0]                   ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_tens[1]                    ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_tens[1]                   ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_tens[2]                    ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_tens[2]                   ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; ajuste_relogio:inst2|hou_tens[3]                    ; ajuste_relogio:inst2|hou_units[3]  ; yes                    ;
+; ajuste_relogio:inst19|hou_tens[3]                   ; ajuste_relogio:inst19|hou_units[3] ; yes                    ;
+; Number of user-specified and inferred latches = 48  ;                                    ;                        ;
++-----------------------------------------------------+------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; reset:inst02|reset_relogio            ; Merged with reset:inst02|reset_timer   ;
+; reset:inst02|reset_cronometro         ; Merged with reset:inst02|reset_timer   ;
+; cronometro:inst07|sec_tens[3]         ; Stuck at GND due to stuck port data_in ;
+; cronometro:inst07|min_tens[3]         ; Stuck at GND due to stuck port data_in ;
+; cronometro:inst07|hour_tens[2,3]      ; Stuck at GND due to stuck port data_in ;
+; timer:inst18|hour_tens[3]             ; Stuck at GND due to stuck port data_in ;
+; relogio:inst03|hour_tens[3]           ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 8 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 216   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 144   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 142   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Teste|relogio:inst03|sec_units[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |Teste|timer:inst18|hour_tens[3]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Teste|timer:inst18|sec_units[2]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Teste|relogio:inst03|sec_tens[2]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Teste|timer:inst18|sec_tens[2]    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Teste|relogio:inst03|min_units[0] ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Teste|timer:inst18|min_units[1]   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Teste|relogio:inst03|min_tens[0]  ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Teste|timer:inst18|min_tens[1]    ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Teste|relogio:inst03|hours[0]     ;
+; 8:1                ; 5 bits    ; 25 LEs        ; 10 LEs               ; 15 LEs                 ; Yes        ; |Teste|timer:inst18|hours[2]       ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 96 LEs               ; 24 LEs                 ; No         ; |Teste|separador:inst13|Selector15 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod2 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod2 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div2 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div2 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div0 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod1 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div1 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div1 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div1 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod3 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_15m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod3 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_15m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_25m ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod2 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_15m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div3 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_ucm ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: timer:inst18|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                             ;
+; LPM_WIDTHD             ; 4              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div3 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ucm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: relogio:inst03|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 6              ; Untyped                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_vcm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div2 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_ucm ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div3 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_aem ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Mod3 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 4              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_d6m ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: cronometro:inst07|lpm_divide:Div4 ;
++------------------------+----------------+------------------------------------------+
+; Parameter Name         ; Value          ; Type                                     ;
++------------------------+----------------+------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                  ;
+; LPM_WIDTHD             ; 7              ; Untyped                                  ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                  ;
+; LPM_PIPELINE           ; 0              ; Untyped                                  ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                  ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                  ;
+; CBXI_PARAMETER         ; lpm_divide_dem ; Untyped                                  ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                  ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                  ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                           ;
++------------------------+----------------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Sep 18 08:34:58 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PF -c PF
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file inicial.sv
+    Info (12023): Found entity 1: inicial
+Info (12021): Found 1 design units, including 1 entities, in source file pf.bdf
+    Info (12023): Found entity 1: PF
+Info (12021): Found 1 design units, including 1 entities, in source file separador.sv
+    Info (12023): Found entity 1: separador
+Info (12021): Found 1 design units, including 1 entities, in source file coder7.sv
+    Info (12023): Found entity 1: coder7
+Info (12021): Found 1 design units, including 1 entities, in source file relogio.sv
+    Info (12023): Found entity 1: relogio
+Info (12021): Found 1 design units, including 1 entities, in source file reset.sv
+    Info (12023): Found entity 1: reset
+Info (12021): Found 1 design units, including 1 entities, in source file cronometro.sv
+    Info (12023): Found entity 1: cronometro
+Info (12021): Found 1 design units, including 1 entities, in source file ajuste_timer.sv
+    Info (12023): Found entity 1: ajuste_timer
+Info (12021): Found 1 design units, including 1 entities, in source file timer.sv
+    Info (12023): Found entity 1: timer
+Info (12021): Found 1 design units, including 1 entities, in source file ajuste_relogio.sv
+    Info (12023): Found entity 1: ajuste_relogio
+Info (12021): Found 1 design units, including 1 entities, in source file fdiv.sv
+    Info (12023): Found entity 1: fdiv
+Info (12021): Found 1 design units, including 1 entities, in source file decoder7.sv
+    Info (12023): Found entity 1: decoder7
+Info (12021): Found 1 design units, including 1 entities, in source file ent_separador.sv
+    Info (12023): Found entity 1: ent_separador
+Info (12021): Found 1 design units, including 1 entities, in source file segment_output.sv
+    Info (12023): Found entity 1: segment_output
+Info (12021): Found 1 design units, including 1 entities, in source file teste.bdf
+    Info (12023): Found entity 1: Teste
+Info (12021): Found 1 design units, including 1 entities, in source file play_pause.sv
+    Info (12023): Found entity 1: play_pause
+Info (12021): Found 1 design units, including 1 entities, in source file cronometro_centesimos.sv
+    Info (12023): Found entity 1: cronometro_centesimos
+Info (12127): Elaborating entity "Teste" for the top level hierarchy
+Info (12128): Elaborating entity "segment_output" for hierarchy "segment_output:inst17"
+Info (12128): Elaborating entity "decoder7" for hierarchy "decoder7:inst82"
+Info (12128): Elaborating entity "cronometro_centesimos" for hierarchy "cronometro_centesimos:inst16"
+Info (12128): Elaborating entity "inicial" for hierarchy "inicial:inst00"
+Info (12128): Elaborating entity "fdiv" for hierarchy "fdiv:inst"
+Info (12128): Elaborating entity "cronometro" for hierarchy "cronometro:inst07"
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(57): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(60): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(63): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(66): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(70): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(71): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(72): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(73): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(74): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(75): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(76): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(77): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at cronometro.sv(79): truncated value with size 32 to match size of target (17)
+Info (12128): Elaborating entity "reset" for hierarchy "reset:inst02"
+Warning (10230): Verilog HDL assignment warning at reset.sv(22): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "separador" for hierarchy "separador:inst13"
+Info (12128): Elaborating entity "ajuste_relogio" for hierarchy "ajuste_relogio:inst2"
+Warning (10036): Verilog HDL or VHDL warning at ajuste_relogio.sv(34): object "blink_state" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at ajuste_relogio.sv(35): object "blink_counter" assigned a value but never read
+Warning (10270): Verilog HDL Case Statement warning at ajuste_relogio.sv(42): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "sec_tens", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "sec_units", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "min_tens", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "min_units", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "hou_tens", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(41): inferring latch(es) for variable "hou_units", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at ajuste_relogio.sv(73): truncated value with size 32 to match size of target (2)
+Warning (10240): Verilog HDL Always Construct warning at ajuste_relogio.sv(61): inferring latch(es) for variable "set_prev", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "set_prev" at ajuste_relogio.sv(61)
+Info (10041): Inferred latch for "hou_units[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_units[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_units[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_units[3]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_tens[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_tens[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_tens[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "hou_tens[3]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_units[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_units[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_units[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_units[3]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_tens[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_tens[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_tens[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "min_tens[3]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_units[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_units[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_units[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_units[3]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_tens[0]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_tens[1]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_tens[2]" at ajuste_relogio.sv(41)
+Info (10041): Inferred latch for "sec_tens[3]" at ajuste_relogio.sv(41)
+Info (12128): Elaborating entity "relogio" for hierarchy "relogio:inst03"
+Warning (10230): Verilog HDL assignment warning at relogio.sv(32): truncated value with size 6 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(33): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(34): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(35): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(36): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(37): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(38): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(42): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(45): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(48): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(51): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(54): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at relogio.sv(64): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "timer" for hierarchy "timer:inst18"
+Warning (10230): Verilog HDL assignment warning at timer.sv(33): truncated value with size 6 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at timer.sv(34): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(35): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(36): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(37): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(38): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(39): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(42): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(45): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(48): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(51): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(54): truncated value with size 32 to match size of target (5)
+Warning (10230): Verilog HDL assignment warning at timer.sv(63): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at timer.sv(64): truncated value with size 32 to match size of target (4)
+Info (278001): Inferred 25 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Mod1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Div1"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Mod0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Mod2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "timer:inst18|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "relogio:inst03|Div0"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Div2"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Div3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Mod3"
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cronometro:inst07|Div4"
+Info (12130): Elaborated megafunction instantiation "timer:inst18|lpm_divide:Mod2"
+Info (12133): Instantiated megafunction "timer:inst18|lpm_divide:Mod2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_25m.tdf
+    Info (12023): Found entity 1: lpm_divide_25m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
+    Info (12023): Found entity 1: alt_u_div_kve
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
+    Info (12023): Found entity 1: add_sub_lkc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
+    Info (12023): Found entity 1: add_sub_mkc
+Info (12130): Elaborated megafunction instantiation "timer:inst18|lpm_divide:Div2"
+Info (12133): Instantiated megafunction "timer:inst18|lpm_divide:Div2" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "6"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_vcm.tdf
+    Info (12023): Found entity 1: lpm_divide_vcm
+Info (12130): Elaborated megafunction instantiation "timer:inst18|lpm_divide:Mod3"
+Info (12133): Instantiated megafunction "timer:inst18|lpm_divide:Mod3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_15m.tdf
+    Info (12023): Found entity 1: lpm_divide_15m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ive.tdf
+    Info (12023): Found entity 1: alt_u_div_ive
+Info (12130): Elaborated megafunction instantiation "timer:inst18|lpm_divide:Div3"
+Info (12133): Instantiated megafunction "timer:inst18|lpm_divide:Div3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ucm.tdf
+    Info (12023): Found entity 1: lpm_divide_ucm
+Info (12130): Elaborated megafunction instantiation "cronometro:inst07|lpm_divide:Div3"
+Info (12133): Instantiated megafunction "cronometro:inst07|lpm_divide:Div3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_aem.tdf
+    Info (12023): Found entity 1: lpm_divide_aem
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_klh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_klh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a2f.tdf
+    Info (12023): Found entity 1: alt_u_div_a2f
+Info (12130): Elaborated megafunction instantiation "cronometro:inst07|lpm_divide:Mod3"
+Info (12133): Instantiated megafunction "cronometro:inst07|lpm_divide:Mod3" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_d6m.tdf
+    Info (12023): Found entity 1: lpm_divide_d6m
+Info (12130): Elaborated megafunction instantiation "cronometro:inst07|lpm_divide:Div4"
+Info (12133): Instantiated megafunction "cronometro:inst07|lpm_divide:Div4" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "7"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dem.tdf
+    Info (12023): Found entity 1: lpm_divide_dem
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_nlh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_g2f.tdf
+    Info (12023): Found entity 1: alt_u_div_g2f
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_tens[3]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_tens[2]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_tens[1]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_tens[0]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_units[3]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_units[2]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|sec_units[1]" merged with LATCH primitive "ajuste_relogio:inst2|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_tens[3]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_tens[2]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_tens[1]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_tens[0]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_units[3]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_units[2]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|sec_units[1]" merged with LATCH primitive "ajuste_relogio:inst19|sec_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_tens[3]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_tens[2]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_tens[1]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_tens[0]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_units[3]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_units[2]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|min_units[1]" merged with LATCH primitive "ajuste_relogio:inst2|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_tens[3]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_tens[2]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_tens[1]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_tens[0]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_units[3]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_units[2]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|min_units[1]" merged with LATCH primitive "ajuste_relogio:inst19|min_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_tens[3]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_tens[2]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_tens[1]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_tens[0]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_units[3]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_units[2]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst2|hou_units[1]" merged with LATCH primitive "ajuste_relogio:inst2|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_tens[3]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_tens[2]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_tens[1]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_tens[0]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_units[3]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_units[2]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+    Info (13026): Duplicate LATCH primitive "ajuste_relogio:inst19|hou_units[1]" merged with LATCH primitive "ajuste_relogio:inst19|hou_units[0]"
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1369 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 75 output pins
+    Info (21061): Implemented 1275 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 54 warnings
+    Info: Peak virtual memory: 4624 megabytes
+    Info: Processing ended: Wed Sep 18 08:35:03 2024
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
+
+

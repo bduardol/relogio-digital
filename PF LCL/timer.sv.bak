@@ -1,0 +1,105 @@
+module timer (
+    input wire clk,
+    input wire reset,  // Inicia a contagem quando ativado
+    input wire stop,   // Pode parar a contagem se necessário
+
+    output reg [3:0] hour_tens, 
+    output reg [3:0] hour_units, 
+    output reg [3:0] min_tens,     
+    output reg [3:0] min_units,     
+    output reg [3:0] sec_tens,      
+    output reg [3:0] sec_units,
+	 
+	 input wire [3:0] adjusted_hour_tens, // Valores ajustados vêm de outro módulo
+    input wire [3:0] adjusted_hour_units, 
+    input wire [3:0] adjusted_min_tens,     
+    input wire [3:0] adjusted_min_units,     
+    input wire [3:0] adjusted_sec_tens,      
+    input wire [3:0] adjusted_sec_units
+);
+
+reg running;  // Estado do timer: running (1) ou stopped (0)
+reg [15:0] count;  // Contador para um segundo com clock de 50MHz
+reg [5:0] seconds; // Contador de segundos (0-59)
+reg [5:0] minutes; // Contador de minutos (0-59)
+reg [4:0] hours;   // Contador de horas (0-23)
+
+initial begin
+    // Inicializa com o valor máximo
+    hour_tens = 2;
+    hour_units = 3;
+    min_tens = 5;
+    min_units = 9;
+    sec_tens = 5;
+    sec_units = 9;
+    seconds = 59;
+    minutes = 59;
+    hours = 23;
+    running = 0;
+    count = 0;
+end
+
+always @(posedge clk) begin
+    if (reset) begin
+        // Inicia a contagem de 23:59:59
+        hour_tens <= 2;
+        hour_units <= 3;
+        min_tens <= 5;
+        min_units <= 9;
+        sec_tens <= 5;
+        sec_units <= 9;
+        seconds <= 59;
+        minutes <= 59;
+        hours <= 23;
+        running <= 1;  // Inicia a contagem
+        count <= 0;
+    end else if (adjust) begin
+		  // Define os valores do relógio com os ajustes fornecidos
+        hour_tens <= adjusted_hour_tens;
+        hour_units <= adjusted_hour_units;
+        min_tens <= adjusted_min_tens;
+        min_units <= adjusted_min_units;
+        sec_tens <= adjusted_sec_tens;
+        sec_units <= adjusted_sec_units;
+
+        // Reseta outros valores para zero ou valores iniciais
+        seconds <= 0;
+        minutes <= 0;
+        hours <= 0;
+        running <= 0;
+        count <= 0;		
+	 
+	 end
+
+    if (running) begin
+        if (count == 49999) begin
+            count <= 0;
+            if (seconds == 0) begin
+                seconds <= 59;
+                if (minutes == 0) begin
+                    minutes <= 59;
+                    if (hours == 0) begin
+                        running <= 0;  // Para a contagem quando chegar a 00:00:00
+                    end else begin
+                        hours <= hours - 1;
+                    end
+                end else begin
+                    minutes <= minutes - 1;
+                end
+            end else begin
+                seconds <= seconds - 1;
+            end
+
+            // Atualiza saídas
+            sec_units <= seconds % 10;
+            sec_tens <= seconds / 10;
+            min_units <= minutes % 10;
+            min_tens <= minutes / 10;
+            hour_units <= hours % 10;
+            hour_tens <= hours / 10;
+        end else begin
+            count <= count + 1;
+        end
+    end
+end
+endmodule

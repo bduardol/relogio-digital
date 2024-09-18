@@ -1,0 +1,52 @@
+module ajuste (
+    input wire clk,
+    input wire [3:0] dz,            
+    input wire [3:0] un,            
+    input wire ajMod,               
+    output reg [3:0] hou_tens,      // Dezenas das horas
+    output reg [3:0] hou_units,     // Unidades das horas
+    output reg [3:0] min_tens,      // Dezenas dos minutos
+    output reg [3:0] min_units,     // Unidades dos minutos
+    output reg [3:0] sec_units,     // Unidades dos segundos
+    output reg [3:0] sec_tens,      // Dezenas dos segundos
+    output reg [3:0] csec_units,    // Unidades dos centésimos de segundos
+    output reg [3:0] csec_tens     // Dezenas dos centésimos de segundos
+);
+/8
+    reg [1:0] ajuste_mode;
+    reg ajMod_prev;
+
+    // Detecta a borda de subida do botão ajMod
+    always @(posedge clk) begin
+        ajMod_prev <= ajMod;
+    end
+
+    wire ajMod_edge = (ajMod && !ajMod_prev);
+
+    always @(posedge clk) begin
+        if (ajMod_edge) begin
+            ajuste_mode <= ajuste_mode + 1;
+        end
+        
+        case (ajuste_mode)
+            2'b00: begin
+                if (dz < 4'd10) hou_tens <= dz;      
+                if (un < 4'd10) hou_units <= un;     
+            end
+            2'b01: begin
+                
+                if (dz < 4'd6) min_tens <= dz;      
+                if (un < 4'd10) min_units <= un;    
+            end
+            2'b10: begin
+                
+                if (dz < 4'd6) sec_tens <= dz;      
+                if (un < 4'd10) sec_units <= un;    
+            end
+            2'b11: begin
+                
+                if (dz < 4'd10) csec_tens <= dz;   
+                if (un < 4'd10) csec_units <= un;  
+            end
+        endcase
+    end

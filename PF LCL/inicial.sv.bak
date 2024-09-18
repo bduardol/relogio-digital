@@ -1,0 +1,15 @@
+module inicial(SW, Out);
+    input [2:0] SW;   // Entradas combinadas SW17, SW16, SW15
+    output reg [4:0] Out; // Saídas para as cinco operações possíveis
+
+    always @(*) begin
+        case (SW)
+            3'b000 : Out = 5'b00001; // Modo Relógio
+            3'b001 : Out = 5'b00010; // Modo Cronômetro
+            3'b010 : Out = 5'b00100; // Modo Timer
+            3'b100 : Out = 5'b01000; // Ajuste da hora do Relógio
+            3'b101 : Out = 5'b10000; // Ajuste da hora do Timer
+            default : Out = 5'b00000; // Estado padrão, nenhuma operação selecionada
+        endcase
+    end
+endmodule

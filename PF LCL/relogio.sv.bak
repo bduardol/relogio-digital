@@ -1,0 +1,112 @@
+module relogio(
+    input wire clk,
+    input wire start,
+    input wire stop,
+    input wire reset,
+	 input adjust,
+    
+    output reg [3:0] hour_tens, 
+    output reg [3:0] hour_units, 
+    output reg [3:0] min_tens,     
+    output reg [3:0] min_units,     
+    output reg [3:0] sec_tens,      
+    output reg [3:0] sec_units,
+	 
+	 
+	 input wire [3:0] adjusted_hour_tens, // Valores ajustados vêm de outro módulo
+    input wire [3:0] adjusted_hour_units, 
+    input wire [3:0] adjusted_min_tens,     
+    input wire [3:0] adjusted_min_units,     
+    input wire [3:0] adjusted_sec_tens,      
+    input wire [3:0] adjusted_sec_units
+   
+);
+
+reg running;
+reg [15:0] count;  // Contador para gerar um segundo com clock de 50MHz
+reg [5:0] seconds;      // Contador de segundos (0-59)
+reg [5:0] minutes;      // Contador de minutos (0-59)
+reg [4:0] hours;        // Contador de horas (0-23)
+
+initial begin
+    hour_tens = 0;
+    hour_units = 0;
+    min_tens = 0;
+    min_units = 0;
+    sec_tens = 0;
+    sec_units = 0;
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    running = 0;
+    count = 0;
+end
+
+always @(posedge clk) begin
+    if (reset) begin
+        hour_tens <= 0;
+        hour_units <= 0;
+        min_tens <= 0;
+        min_units <= 0;
+        sec_tens <= 0;
+        sec_units <= 0;
+        seconds <= 0;
+        minutes <= 0;
+        hours <= 0;
+        running <= 0;
+        count <= 0;
+    end else if (start) begin
+        running <= 1;
+    end else if (stop) begin
+        running <= 0;
+    end else if (adjust) begin
+		  // Define os valores do relógio com os ajustes fornecidos
+        hour_tens <= adjusted_hour_tens;
+        hour_units <= adjusted_hour_units;
+        min_tens <= adjusted_min_tens;
+        min_units <= adjusted_min_units;
+        sec_tens <= adjusted_sec_tens;
+        sec_units <= adjusted_sec_units;
+
+        // Reseta outros valores para zero ou valores iniciais
+        seconds <= 0;
+        minutes <= 0;
+        hours <= 0;
+        running <= 0;
+        count <= 0;		
+	 
+	 end
+
+    if (running) begin
+        if (count == 49999999) begin  // Ajuste para um intervalo de 1 segundo com clock de 50MHz
+            count <= 0;
+            if (seconds == 59) begin
+                seconds <= 0;
+                if (minutes == 59) begin
+                    minutes <= 0;
+                    if (hours == 23) begin
+                        // Reset ao atingir 23:59:59
+                        hours <= 0;
+                    end else begin
+                        hours <= hours + 1;
+                    end
+                end else begin
+                    minutes <= minutes + 1;
+                end
+            end else begin
+                seconds <= seconds + 1;
+            end
+            
+            // Atualiza saídas
+            sec_units <= seconds % 10;
+            sec_tens <= seconds / 10;
+            min_units <= minutes % 10;
+            min_tens <= minutes / 10;
+            hour_units <= hours % 10;
+            hour_tens <= hours / 10;
+        end else begin
+            count <= count + 1;
+        end
+    end
+end
+endmodule

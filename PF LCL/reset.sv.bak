@@ -1,0 +1,30 @@
+module reset(
+    input wire clk,
+    input wire reset,
+    input wire [4:0] Out,     // Modo recebido do módulo inicial
+    output reg reset_relogio,  // Reset para o módulo do relógio
+    output reg reset_cronometro,  // Reset para o módulo do cronômetro
+    output reg reset_timer,    // Reset para o módulo do timer
+    output reg ajuste_relogio, // Sinal de ajuste para o relógio
+    output reg ajuste_timer    // Sinal de ajuste para o timer
+);
+
+always @(posedge clk or posedge reset) begin
+    if (reset) begin
+        // Reseta os sinais de saída baseado nos bits individuais de Out
+        reset_relogio <= Out[0];     // Assume que Out[0] corresponde ao modo relógio
+        reset_cronometro <= Out[1];  // Assume que Out[1] corresponde ao modo cronômetro
+        reset_timer <= Out[2];       // Assume que Out[2] corresponde ao modo timer
+        ajuste_relogio <= Out[3];    // Assume que Out[3] corresponde ao ajuste do relógio
+        ajuste_timer <= Out[4];      // Assume que Out[4] corresponde ao ajuste do timer
+    end else begin
+        // Assegura que todos os sinais de reset e ajuste são desativados quando não há reset
+        reset_relogio <= 0;
+        reset_cronometro <= 0;
+        reset_timer <= 0;
+        ajuste_relogio <= 0;
+        ajuste_timer <= 0;
+    end
+end
+
+endmodule
