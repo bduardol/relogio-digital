@@ -185,41 +185,26 @@ out_cent_sec_units[3] <= out_cent_sec_units[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Teste|inicial:inst00
-clk => last_state[0].CLK
-clk => last_state[1].CLK
-clk => last_state[2].CLK
-reset => last_state[0].ACLR
-reset => last_state[1].ACLR
-reset => last_state[2].ACLR
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
 SW2 => modo_ajuste_relogio.IN0
 SW2 => modo_ajuste_timer.IN0
-SW2 => last_state[2].DATAIN
 SW2 => modo_relogio.IN0
 SW2 => modo_timer.IN0
-SW2 => Equal1.IN0
-SW2 => Equal3.IN1
 SW1 => modo_timer.IN1
 SW1 => modo_ajuste_timer.IN1
-SW1 => last_state[1].DATAIN
 SW1 => modo_relogio.IN1
 SW1 => modo_ajuste_relogio.IN1
-SW1 => Equal1.IN1
-SW1 => Equal3.IN0
 SW0 => modo_cronometro.IN1
-SW0 => last_state[0].DATAIN
 SW0 => modo_relogio.IN1
 SW0 => modo_timer.IN1
 SW0 => modo_ajuste_relogio.IN1
 SW0 => modo_ajuste_timer.IN1
-SW0 => Equal1.IN2
-SW0 => Equal3.IN2
 modo_relogio <= modo_relogio.DB_MAX_OUTPUT_PORT_TYPE
 modo_cronometro <= modo_cronometro.DB_MAX_OUTPUT_PORT_TYPE
 modo_timer <= modo_timer.DB_MAX_OUTPUT_PORT_TYPE
 modo_ajuste_relogio <= modo_ajuste_relogio.DB_MAX_OUTPUT_PORT_TYPE
 modo_ajuste_timer <= modo_ajuste_timer.DB_MAX_OUTPUT_PORT_TYPE
-flag_ajuste_relogio <= flag_ajuste_relogio.DB_MAX_OUTPUT_PORT_TYPE
-flag_ajuste_timer <= flag_ajuste_timer.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Teste|fdiv:inst

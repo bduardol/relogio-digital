@@ -38,7 +38,6 @@ always @(posedge clk) begin
 			sec_tens <= adjust_sec / 10;
 			sec_units <= adjust_sec % 10;	 
 	 end else begin
-        // Clock increment logic
         sec_units <= sec_units - 1;
         if (sec_units == 0) begin
             sec_units <= 9;
@@ -59,7 +58,6 @@ always @(posedge clk) begin
                 end
             end
         end
-        // Update digital display for hours
         hour_units <= hours % 10;
         hour_tens <= hours / 10;
     end

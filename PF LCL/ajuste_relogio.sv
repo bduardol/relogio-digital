@@ -71,14 +71,14 @@ always @( posedge clk or posedge reset) begin
         if (modo_ajuste) begin
             if (set && !set_prev) begin // Detect edge
                 count <= count + 1;
-					 if (count == 1) begin
+					 if (count == 0) begin
 						horas <= input_value;
 					 end
-					 if (count == 2) begin
+					 if (count == 1) begin
 						minutos <= input_value;
 					 end
 					 
-                if (count >= 3) begin
+                if (count >= 2) begin
                     count <= 0;
 						  segundos <= input_value;
                     adjust_final <= 1;  // Ajuste concluído, sinaliza para o sistema

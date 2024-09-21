@@ -1,5 +1,5 @@
 Fitter report for PF
-Wed Sep 18 08:35:14 2024
+Thu Sep 19 16:37:03 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -65,15 +65,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Sep 18 08:35:14 2024           ;
+; Fitter Status                      ; Successful - Thu Sep 19 16:37:03 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; PF                                              ;
 ; Top-level Entity Name              ; Teste                                           ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,240 / 33,216 ( 4 % )                          ;
-;     Total combinational functions  ; 1,233 / 33,216 ( 4 % )                          ;
+; Total logic elements               ; 1,249 / 33,216 ( 4 % )                          ;
+;     Total combinational functions  ; 1,235 / 33,216 ( 4 % )                          ;
 ;     Dedicated logic registers      ; 216 / 33,216 ( < 1 % )                          ;
 ; Total registers                    ; 216                                             ;
 ; Total pins                         ; 94 / 475 ( 20 % )                               ;
@@ -490,8 +490,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 1549 ( 0.00 % )    ;
-;     -- Achieved     ; 0 / 1549 ( 0.00 % )    ;
+;     -- Requested    ; 0 / 1551 ( 0.00 % )    ;
+;     -- Achieved     ; 0 / 1551 ( 0.00 % )    ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -514,7 +514,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 1546    ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 1548    ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 3       ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 
@@ -530,26 +530,26 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 1,240 / 33,216 ( 4 % ) ;
-;     -- Combinational with no register       ; 1024                   ;
-;     -- Register only                        ; 7                      ;
-;     -- Combinational with a register        ; 209                    ;
+; Total logic elements                        ; 1,249 / 33,216 ( 4 % ) ;
+;     -- Combinational with no register       ; 1033                   ;
+;     -- Register only                        ; 14                     ;
+;     -- Combinational with a register        ; 202                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 334                    ;
-;     -- 3 input functions                    ; 259                    ;
-;     -- <=2 input functions                  ; 640                    ;
-;     -- Register only                        ; 7                      ;
+;     -- 3 input functions                    ; 257                    ;
+;     -- <=2 input functions                  ; 644                    ;
+;     -- Register only                        ; 14                     ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 871                    ;
+;     -- normal mode                          ; 873                    ;
 ;     -- arithmetic mode                      ; 362                    ;
 ;                                             ;                        ;
 ; Total registers*                            ; 216 / 34,593 ( < 1 % ) ;
 ;     -- Dedicated logic registers            ; 216 / 33,216 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 95 / 2,076 ( 5 % )     ;
+; Total LABs:  partially or completely used   ; 92 / 2,076 ( 4 % )     ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 94 / 475 ( 20 % )      ;
 ;     -- Clock pins                           ; 8 / 8 ( 100 % )        ;
@@ -565,10 +565,10 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 1% / 1% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 4% / 4% / 4%           ;
+; Peak interconnect usage (total/H/V)         ; 6% / 5% / 6%           ;
 ; Maximum fan-out                             ; 113                    ;
 ; Highest non-global fan-out                  ; 72                     ;
-; Total fan-out                               ; 4026                   ;
+; Total fan-out                               ; 4035                   ;
 ; Average fan-out                             ; 2.59                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
@@ -582,25 +582,25 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 1240 / 33216 ( 4 % )  ; 0 / 33216 ( 0 % )              ;
-;     -- Combinational with no register       ; 1024                  ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
-;     -- Combinational with a register        ; 209                   ; 0                              ;
+; Total logic elements                        ; 1249 / 33216 ( 4 % )  ; 0 / 33216 ( 0 % )              ;
+;     -- Combinational with no register       ; 1033                  ; 0                              ;
+;     -- Register only                        ; 14                    ; 0                              ;
+;     -- Combinational with a register        ; 202                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
 ;     -- 4 input functions                    ; 334                   ; 0                              ;
-;     -- 3 input functions                    ; 259                   ; 0                              ;
-;     -- <=2 input functions                  ; 640                   ; 0                              ;
-;     -- Register only                        ; 7                     ; 0                              ;
+;     -- 3 input functions                    ; 257                   ; 0                              ;
+;     -- <=2 input functions                  ; 644                   ; 0                              ;
+;     -- Register only                        ; 14                    ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 871                   ; 0                              ;
+;     -- normal mode                          ; 873                   ; 0                              ;
 ;     -- arithmetic mode                      ; 362                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Total registers                             ; 216                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 216 / 33216 ( < 1 % ) ; 0 / 33216 ( 0 % )              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 95 / 2076 ( 5 % )     ; 0 / 2076 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 92 / 2076 ( 4 % )     ; 0 / 2076 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 94                    ; 0                              ;
@@ -616,8 +616,8 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 4026                  ; 0                              ;
-;     -- Registered Connections               ; 962                   ; 0                              ;
+;     -- Total Connections                    ; 4035                  ; 0                              ;
+;     -- Registered Connections               ; 956                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 0                     ; 0                              ;
@@ -656,9 +656,9 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 ; SW[12]   ; P2    ; 1        ; 0            ; 18           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[13]   ; T7    ; 1        ; 0            ; 11           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[14]   ; U3    ; 1        ; 0            ; 12           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[15]   ; U4    ; 1        ; 0            ; 12           ; 1           ; 37                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[16]   ; V1    ; 1        ; 0            ; 12           ; 2           ; 52                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[17]   ; V2    ; 1        ; 0            ; 12           ; 3           ; 51                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[15]   ; U4    ; 1        ; 0            ; 12           ; 1           ; 43                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[16]   ; V1    ; 1        ; 0            ; 12           ; 2           ; 58                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[17]   ; V2    ; 1        ; 0            ; 12           ; 3           ; 57                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[1]    ; N26   ; 5        ; 65           ; 19           ; 1           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[2]    ; P25   ; 6        ; 65           ; 19           ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[3]    ; AE14  ; 7        ; 33           ; 0            ; 0           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
@@ -666,7 +666,7 @@ The pin-out file can be found in C:/Users/bedua/Downloads/Projeto final - LCL/PF
 ; SW[5]    ; AD13  ; 8        ; 33           ; 0            ; 2           ; 7                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[6]    ; AC13  ; 8        ; 33           ; 0            ; 3           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[7]    ; C13   ; 3        ; 31           ; 36           ; 2           ; 20                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SW[8]    ; B13   ; 4        ; 31           ; 36           ; 0           ; 11                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SW[8]    ; B13   ; 4        ; 31           ; 36           ; 0           ; 5                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; SW[9]    ; A13   ; 4        ; 31           ; 36           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -1493,42 +1493,42 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                      ; Library Name ;
 +-------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
-; |Teste                                    ; 1240 (2)    ; 216 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 94   ; 0            ; 1024 (2)     ; 7 (0)             ; 209 (1)          ; |Teste                                                                                                                   ; work         ;
-;    |ajuste_relogio:inst19|                ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 4 (4)             ; 18 (18)          ; |Teste|ajuste_relogio:inst19                                                                                             ; work         ;
-;    |ajuste_relogio:inst2|                 ; 31 (31)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 2 (2)             ; 20 (20)          ; |Teste|ajuste_relogio:inst2                                                                                              ; work         ;
-;    |cronometro:inst07|                    ; 451 (134)   ; 72 (72)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 379 (65)     ; 0 (0)             ; 72 (53)          ; |Teste|cronometro:inst07                                                                                                 ; work         ;
+; |Teste                                    ; 1249 (1)    ; 216 (0)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 94   ; 0            ; 1033 (1)     ; 14 (0)            ; 202 (2)          ; |Teste                                                                                                                   ; work         ;
+;    |ajuste_relogio:inst19|                ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 4 (4)             ; 18 (18)          ; |Teste|ajuste_relogio:inst19                                                                                             ; work         ;
+;    |ajuste_relogio:inst2|                 ; 30 (30)     ; 22 (22)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 7 (7)             ; 15 (15)          ; |Teste|ajuste_relogio:inst2                                                                                              ; work         ;
+;    |cronometro:inst07|                    ; 453 (131)   ; 72 (72)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 381 (59)     ; 3 (3)             ; 69 (58)          ; |Teste|cronometro:inst07                                                                                                 ; work         ;
 ;       |lpm_divide:Div0|                   ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div0                                                                                 ; work         ;
 ;          |lpm_divide_vcm:auto_generated|  ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
 ;                |alt_u_div_kve:divider|    ; 25 (25)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
-;       |lpm_divide:Div1|                   ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1                                                                                 ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
-;                |alt_u_div_kve:divider|    ; 25 (25)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 22 (22)      ; 0 (0)             ; 3 (3)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
-;       |lpm_divide:Div2|                   ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2                                                                                 ; work         ;
-;          |lpm_divide_ucm:auto_generated|  ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_8kh:divider| ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (0)        ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
-;                |alt_u_div_ive:divider|    ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 3 (3)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
-;       |lpm_divide:Div3|                   ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3                                                                                 ; work         ;
-;          |lpm_divide_aem:auto_generated|  ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_klh:divider| ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
-;                |alt_u_div_a2f:divider|    ; 82 (82)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 80 (80)      ; 0 (0)             ; 2 (2)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
+;       |lpm_divide:Div1|                   ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1                                                                                 ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 25 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 25 (25)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Div2|                   ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2                                                                                 ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 12 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_ive:divider|    ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div2|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
+;       |lpm_divide:Div3|                   ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 82 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3                                                                                 ; work         ;
+;          |lpm_divide_aem:auto_generated|  ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 82 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_klh:divider| ; 82 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 82 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
+;                |alt_u_div_a2f:divider|    ; 82 (82)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 82 (82)      ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider ; work         ;
 ;       |lpm_divide:Div4|                   ; 56 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div4                                                                                 ; work         ;
 ;          |lpm_divide_dem:auto_generated|  ; 56 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_nlh:divider| ; 56 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider                       ; work         ;
 ;                |alt_u_div_g2f:divider|    ; 56 (56)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 56 (56)      ; 0 (0)             ; 0 (0)            ; |Teste|cronometro:inst07|lpm_divide:Div4|lpm_divide_dem:auto_generated|sign_div_unsign_nlh:divider|alt_u_div_g2f:divider ; work         ;
-;       |lpm_divide:Mod0|                   ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0                                                                                 ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
-;                |alt_u_div_kve:divider|    ; 33 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 3 (3)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
+;       |lpm_divide:Mod0|                   ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0                                                                                 ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
+;                |alt_u_div_kve:divider|    ; 33 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 0 (0)             ; 2 (2)            ; |Teste|cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
 ;       |lpm_divide:Mod1|                   ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod1                                                                                 ; work         ;
 ;          |lpm_divide_25m:auto_generated|  ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 33 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                       ; work         ;
 ;                |alt_u_div_kve:divider|    ; 33 (33)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 3 (3)            ; |Teste|cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider ; work         ;
-;       |lpm_divide:Mod2|                   ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2                                                                                 ; work         ;
-;          |lpm_divide_15m:auto_generated|  ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated                                                   ; work         ;
-;             |sign_div_unsign_8kh:divider| ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
-;                |alt_u_div_ive:divider|    ; 20 (20)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 2 (2)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
+;       |lpm_divide:Mod2|                   ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2                                                                                 ; work         ;
+;          |lpm_divide_15m:auto_generated|  ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated                                                   ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 20 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                       ; work         ;
+;                |alt_u_div_ive:divider|    ; 20 (20)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 3 (3)            ; |Teste|cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider ; work         ;
 ;       |lpm_divide:Mod3|                   ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod3                                                                                 ; work         ;
 ;          |lpm_divide_d6m:auto_generated|  ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod3|lpm_divide_d6m:auto_generated                                                   ; work         ;
 ;             |sign_div_unsign_klh:divider| ; 47 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 44 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|cronometro:inst07|lpm_divide:Mod3|lpm_divide_d6m:auto_generated|sign_div_unsign_klh:divider                       ; work         ;
@@ -1544,70 +1544,70 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |decoder7:inst83|                      ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |Teste|decoder7:inst83                                                                                                   ; work         ;
 ;    |fdiv:inst|                            ; 57 (57)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 33 (33)          ; |Teste|fdiv:inst                                                                                                         ; work         ;
 ;    |inicial:inst00|                       ; 3 (3)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; |Teste|inicial:inst00                                                                                                    ; work         ;
-;    |relogio:inst03|                       ; 281 (69)    ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 235 (41)     ; 0 (0)             ; 46 (26)          ; |Teste|relogio:inst03                                                                                                    ; work         ;
+;    |relogio:inst03|                       ; 281 (68)    ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 243 (40)     ; 0 (0)             ; 38 (27)          ; |Teste|relogio:inst03                                                                                                    ; work         ;
 ;       |lpm_divide:Div0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div0                                                                                    ; work         ;
 ;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                      ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
 ;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
-;       |lpm_divide:Div1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1                                                                                    ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
-;       |lpm_divide:Div2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2                                                                                    ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 5 (5)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
-;       |lpm_divide:Div3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3                                                                                    ; work         ;
-;          |lpm_divide_ucm:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
-;                |alt_u_div_ive:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
-;       |lpm_divide:Mod0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0                                                                                    ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 6 (6)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
-;       |lpm_divide:Mod1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1                                                                                    ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (0)       ; 0 (0)             ; 6 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 6 (6)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1                                                                                    ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 3 (3)            ; |Teste|relogio:inst03|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2                                                                                    ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Div3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3                                                                                    ; work         ;
+;          |lpm_divide_ucm:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
+;       |lpm_divide:Mod0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0                                                                                    ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 4 (4)            ; |Teste|relogio:inst03|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
+;       |lpm_divide:Mod1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1                                                                                    ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
 ;       |lpm_divide:Mod2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod2                                                                                    ; work         ;
 ;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated                                                      ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                          ; work         ;
 ;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider    ; work         ;
-;       |lpm_divide:Mod3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3                                                                                    ; work         ;
-;          |lpm_divide_15m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated                                                      ; work         ;
-;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
-;                |alt_u_div_ive:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
+;       |lpm_divide:Mod3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3                                                                                    ; work         ;
+;          |lpm_divide_15m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated                                                      ; work         ;
+;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                          ; work         ;
+;                |alt_u_div_ive:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 1 (1)            ; |Teste|relogio:inst03|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider    ; work         ;
 ;    |reset:inst02|                         ; 3 (3)       ; 3 (3)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (3)            ; |Teste|reset:inst02                                                                                                      ; work         ;
-;    |separador:inst13|                     ; 71 (71)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 67 (67)      ; 0 (0)             ; 4 (4)            ; |Teste|separador:inst13                                                                                                  ; work         ;
-;    |timer:inst18|                         ; 282 (68)    ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 240 (40)     ; 1 (1)             ; 41 (27)          ; |Teste|timer:inst18                                                                                                      ; work         ;
+;    |separador:inst13|                     ; 71 (71)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 69 (69)      ; 0 (0)             ; 2 (2)            ; |Teste|separador:inst13                                                                                                  ; work         ;
+;    |timer:inst18|                         ; 281 (67)    ; 28 (28)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 240 (38)     ; 0 (0)             ; 41 (29)          ; |Teste|timer:inst18                                                                                                      ; work         ;
 ;       |lpm_divide:Div0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div0                                                                                      ; work         ;
 ;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated                                                        ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
 ;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
-;       |lpm_divide:Div1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div1                                                                                      ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                        ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 30 (30)      ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
-;       |lpm_divide:Div2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Div2                                                                                      ; work         ;
-;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                        ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 2 (2)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Div1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div1                                                                                      ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 3 (3)            ; |Teste|timer:inst18|lpm_divide:Div1|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Div2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div2                                                                                      ; work         ;
+;          |lpm_divide_vcm:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (0)       ; 0 (0)             ; 3 (0)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 3 (3)            ; |Teste|timer:inst18|lpm_divide:Div2|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
 ;       |lpm_divide:Div3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div3                                                                                      ; work         ;
 ;          |lpm_divide_ucm:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated                                                        ; work         ;
 ;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider                            ; work         ;
 ;                |alt_u_div_ive:divider|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Div3|lpm_divide_ucm:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider      ; work         ;
-;       |lpm_divide:Mod0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0                                                                                      ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                        ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 5 (5)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
-;       |lpm_divide:Mod1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1                                                                                      ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                        ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (0)       ; 0 (0)             ; 5 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 25 (25)      ; 0 (0)             ; 5 (5)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
-;       |lpm_divide:Mod2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2                                                                                      ; work         ;
-;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated                                                        ; work         ;
-;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (0)       ; 0 (0)             ; 2 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
-;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 2 (2)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod0|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 4 (0)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 4 (4)            ; |Teste|timer:inst18|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod1|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|timer:inst18|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
+;       |lpm_divide:Mod2|                   ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2                                                                                      ; work         ;
+;          |lpm_divide_25m:auto_generated|  ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated                                                        ; work         ;
+;             |sign_div_unsign_9kh:divider| ; 30 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (0)       ; 0 (0)             ; 1 (0)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider                            ; work         ;
+;                |alt_u_div_kve:divider|    ; 30 (30)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 1 (1)            ; |Teste|timer:inst18|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider      ; work         ;
 ;       |lpm_divide:Mod3|                   ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Mod3                                                                                      ; work         ;
 ;          |lpm_divide_15m:auto_generated|  ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Mod3|lpm_divide_15m:auto_generated                                                        ; work         ;
 ;             |sign_div_unsign_8kh:divider| ; 17 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (0)       ; 0 (0)             ; 0 (0)            ; |Teste|timer:inst18|lpm_divide:Mod3|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider                            ; work         ;
@@ -1698,7 +1698,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LEDR[0]  ; Output   ; --            ; --            ; --                    ; --  ;
 ; SW[16]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; SW[17]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
-; SW[15]   ; Input    ; (6) 2523 ps   ; (0) 171 ps    ; --                    ; --  ;
+; SW[15]   ; Input    ; (0) 171 ps    ; (6) 2523 ps   ; --                    ; --  ;
 ; SW[14]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; SW[13]   ; Input    ; (6) 2523 ps   ; (6) 2523 ps   ; --                    ; --  ;
 ; SW[12]   ; Input    ; (0) 171 ps    ; (0) 171 ps    ; --                    ; --  ;
@@ -1761,20 +1761,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - separador:inst13|Selector1~0                      ; 1                 ; 6       ;
 ;      - separador:inst13|Selector1~1                      ; 1                 ; 6       ;
 ;      - separador:inst13|Selector0~2                      ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~0 ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~1 ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~2 ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~3 ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~0  ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~1  ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~2  ; 1                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~3  ; 1                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~0 ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~1 ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~2 ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~3 ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~0  ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~1  ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~2  ; 0                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~3  ; 0                 ; 6       ;
 ;      - inst20~0                                          ; 1                 ; 6       ;
 ;      - inicial:inst00|modo_timer~0                       ; 1                 ; 6       ;
 ;      - inicial:inst00|modo_timer~1                       ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|count[1]~0                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|segundos[5]~0                ; 1                 ; 6       ;
 ;      - separador:inst13|Selector16~4                     ; 1                 ; 6       ;
 ;      - separador:inst13|Selector8~4                      ; 1                 ; 6       ;
 ;      - separador:inst13|Selector0~3                      ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|Decoder0~11                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|Decoder0~11                 ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|Decoder0~12                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|Decoder0~12                 ; 1                 ; 6       ;
 ;      - LEDR[16]                                          ; 1                 ; 6       ;
 ; SW[17]                                                   ;                   ;         ;
 ;      - separador:inst13|Selector23~0                     ; 1                 ; 6       ;
@@ -1824,48 +1830,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - inst20~0                                          ; 1                 ; 6       ;
 ;      - inicial:inst00|modo_timer~0                       ; 1                 ; 6       ;
 ;      - inicial:inst00|modo_timer~1                       ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|count[1]~0                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|segundos[5]~0                ; 1                 ; 6       ;
 ;      - separador:inst13|Selector16~4                     ; 1                 ; 6       ;
 ;      - separador:inst13|Selector8~4                      ; 1                 ; 6       ;
 ;      - separador:inst13|Selector0~3                      ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|Decoder0~11                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|Decoder0~11                 ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|Decoder0~12                  ; 1                 ; 6       ;
+;      - ajuste_relogio:inst19|Decoder0~12                 ; 1                 ; 6       ;
 ;      - LEDR[17]                                          ; 1                 ; 6       ;
 ; SW[15]                                                   ;                   ;         ;
-;      - separador:inst13|Selector23~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector22~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector21~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector20~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector19~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector18~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector17~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector15~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector14~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector13~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector12~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector11~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector10~2                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector9~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector7~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector6~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector5~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector4~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector3~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector2~2                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector1~2                      ; 0                 ; 6       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~0 ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~1 ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~2 ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_units~3 ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~0  ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~1  ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~2  ; 1                 ; 0       ;
-;      - cronometro_centesimos:inst16|out_cent_sec_tens~3  ; 1                 ; 0       ;
-;      - inst3                                             ; 1                 ; 0       ;
-;      - inst20~0                                          ; 1                 ; 0       ;
-;      - inicial:inst00|modo_timer~0                       ; 1                 ; 0       ;
-;      - inicial:inst00|modo_timer~1                       ; 1                 ; 0       ;
-;      - separador:inst13|Selector16~4                     ; 0                 ; 6       ;
-;      - separador:inst13|Selector8~4                      ; 0                 ; 6       ;
-;      - separador:inst13|Selector0~3                      ; 0                 ; 6       ;
-;      - LEDR[15]                                          ; 0                 ; 6       ;
+;      - separador:inst13|Selector23~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector22~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector21~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector20~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector19~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector18~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector17~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector15~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector14~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector13~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector12~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector11~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector10~2                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector9~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector7~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector6~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector5~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector4~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector3~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector2~2                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector1~2                      ; 1                 ; 6       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~0 ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~1 ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~2 ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_units~3 ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~0  ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~1  ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~2  ; 0                 ; 0       ;
+;      - cronometro_centesimos:inst16|out_cent_sec_tens~3  ; 0                 ; 0       ;
+;      - inst3                                             ; 0                 ; 0       ;
+;      - inst20~0                                          ; 0                 ; 0       ;
+;      - inicial:inst00|modo_timer~0                       ; 0                 ; 0       ;
+;      - inicial:inst00|modo_timer~1                       ; 0                 ; 0       ;
+;      - ajuste_relogio:inst19|count[1]~0                  ; 0                 ; 0       ;
+;      - ajuste_relogio:inst2|segundos[5]~0                ; 0                 ; 0       ;
+;      - separador:inst13|Selector16~4                     ; 1                 ; 6       ;
+;      - separador:inst13|Selector8~4                      ; 1                 ; 6       ;
+;      - separador:inst13|Selector0~3                      ; 1                 ; 6       ;
+;      - ajuste_relogio:inst2|Decoder0~11                  ; 0                 ; 0       ;
+;      - ajuste_relogio:inst19|Decoder0~11                 ; 0                 ; 0       ;
+;      - ajuste_relogio:inst2|Decoder0~12                  ; 0                 ; 0       ;
+;      - ajuste_relogio:inst19|Decoder0~12                 ; 0                 ; 0       ;
+;      - LEDR[15]                                          ; 1                 ; 6       ;
 ; SW[14]                                                   ;                   ;         ;
 ;      - LEDR[14]                                          ; 0                 ; 6       ;
 ; SW[13]                                                   ;                   ;         ;
@@ -1887,53 +1905,55 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                   ;
-+--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                 ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLOCK_50                             ; PIN_N2             ; 113     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; SW[7]                                ; PIN_C13            ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|adjust_final~0 ; LCCOMB_X21_Y12_N28 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|horas[5]~0     ; LCCOMB_X21_Y12_N0  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|hou_units[3]~0 ; LCCOMB_X21_Y12_N24 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|min_units[3]~0 ; LCCOMB_X21_Y12_N4  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|minutos[5]~0   ; LCCOMB_X21_Y12_N16 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst19|sec_units[3]~0 ; LCCOMB_X21_Y12_N20 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|adjust_final~0  ; LCCOMB_X31_Y11_N30 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|horas[5]~0      ; LCCOMB_X20_Y11_N26 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|hou_units[3]~0  ; LCCOMB_X20_Y11_N12 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|min_units[3]~0  ; LCCOMB_X20_Y11_N10 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|minutos[5]~0    ; LCCOMB_X20_Y11_N0  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; ajuste_relogio:inst2|sec_units[3]~0  ; LCCOMB_X20_Y11_N28 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
-; cronometro:inst07|hours[4]~0         ; LCCOMB_X20_Y12_N0  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; cronometro:inst07|minutes[5]~6       ; LCCOMB_X20_Y12_N30 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; cronometro:inst07|sec_units[0]~0     ; LCCOMB_X18_Y13_N0  ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; cronometro:inst07|seconds[5]~0       ; LCCOMB_X18_Y12_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; fdiv:inst|clkout                     ; LCFF_X21_Y12_N23   ; 13      ; Clock        ; no     ; --                   ; --               ; --                        ;
-; fdiv:inst|clkout                     ; LCFF_X21_Y12_N23   ; 99      ; Clock        ; yes    ; Global Clock         ; GCLK12           ; --                        ;
-; inst21                               ; LCCOMB_X17_Y12_N12 ; 44      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; inst3                                ; LCCOMB_X17_Y12_N24 ; 72      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; relogio:inst03|hours[0]~3            ; LCCOMB_X22_Y13_N10 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; relogio:inst03|min_tens[0]~1         ; LCCOMB_X23_Y10_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; relogio:inst03|min_units[0]~1        ; LCCOMB_X23_Y11_N0  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; relogio:inst03|sec_units~6           ; LCCOMB_X33_Y12_N14 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; reset:inst02|reset_timer             ; LCFF_X17_Y12_N25   ; 59      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; timer:inst18|hours[2]~1              ; LCCOMB_X24_Y10_N2  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; timer:inst18|min_tens[1]~9           ; LCCOMB_X27_Y13_N26 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; timer:inst18|min_units[1]~5          ; LCCOMB_X25_Y10_N16 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; timer:inst18|sec_tens[2]~1           ; LCCOMB_X27_Y13_N4  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                  ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLOCK_50                            ; PIN_N2             ; 113     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; SW[7]                               ; PIN_C13            ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|Decoder0~11   ; LCCOMB_X20_Y13_N2  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|Decoder0~12   ; LCCOMB_X20_Y13_N28 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|Decoder0~8    ; LCCOMB_X20_Y13_N18 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|count[1]~0    ; LCCOMB_X20_Y13_N6  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|horas[5]~2    ; LCCOMB_X21_Y13_N0  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|minutos[5]~2  ; LCCOMB_X21_Y13_N16 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst19|segundos[5]~0 ; LCCOMB_X20_Y13_N20 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|Decoder0~11    ; LCCOMB_X22_Y11_N0  ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|Decoder0~12    ; LCCOMB_X22_Y11_N26 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|Decoder0~8     ; LCCOMB_X22_Y11_N22 ; 1       ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|horas[5]~2     ; LCCOMB_X23_Y11_N28 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|minutos[5]~2   ; LCCOMB_X22_Y11_N4  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|segundos[5]~0  ; LCCOMB_X22_Y11_N14 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; ajuste_relogio:inst2|segundos[5]~1  ; LCCOMB_X22_Y11_N28 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cronometro:inst07|hours[4]~0        ; LCCOMB_X17_Y14_N18 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cronometro:inst07|minutes[5]~6      ; LCCOMB_X16_Y14_N30 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cronometro:inst07|sec_units[0]~0    ; LCCOMB_X18_Y14_N8  ; 38      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; cronometro:inst07|seconds[5]~0      ; LCCOMB_X18_Y14_N10 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; fdiv:inst|clkout                    ; LCFF_X34_Y7_N25    ; 99      ; Clock        ; yes    ; Global Clock         ; GCLK13           ; --                        ;
+; fdiv:inst|clkout                    ; LCFF_X34_Y7_N25    ; 13      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; inst21                              ; LCCOMB_X21_Y14_N16 ; 44      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; inst3                               ; LCCOMB_X21_Y14_N6  ; 72      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; relogio:inst03|hours[0]~3           ; LCCOMB_X29_Y11_N12 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; relogio:inst03|min_tens[0]~1        ; LCCOMB_X19_Y9_N30  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; relogio:inst03|min_units[0]~1       ; LCCOMB_X19_Y9_N18  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; relogio:inst03|sec_units~6          ; LCCOMB_X20_Y11_N22 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; reset:inst02|reset_timer            ; LCFF_X21_Y14_N7    ; 59      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; timer:inst18|hours[2]~1             ; LCCOMB_X23_Y14_N0  ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; timer:inst18|min_tens[1]~9          ; LCCOMB_X20_Y14_N10 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; timer:inst18|min_units[1]~5         ; LCCOMB_X22_Y14_N30 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; timer:inst18|sec_tens[2]~1          ; LCCOMB_X20_Y14_N12 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++-------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                         ;
-+------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name             ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------+------------------+---------+----------------------+------------------+---------------------------+
-; CLOCK_50         ; PIN_N2           ; 113     ; Global Clock         ; GCLK2            ; --                        ;
-; fdiv:inst|clkout ; LCFF_X21_Y12_N23 ; 99      ; Global Clock         ; GCLK12           ; --                        ;
-+------------------+------------------+---------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                        ;
++------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; Name             ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++------------------+-----------------+---------+----------------------+------------------+---------------------------+
+; CLOCK_50         ; PIN_N2          ; 113     ; Global Clock         ; GCLK2            ; --                        ;
+; fdiv:inst|clkout ; LCFF_X34_Y7_N25 ; 99      ; Global Clock         ; GCLK13           ; --                        ;
++------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1943,11 +1963,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; inst3                                                                                                                                        ; 72      ;
 ; reset:inst02|reset_timer                                                                                                                     ; 59      ;
-; SW[16]                                                                                                                                       ; 52      ;
-; SW[17]                                                                                                                                       ; 51      ;
+; SW[16]                                                                                                                                       ; 58      ;
+; SW[17]                                                                                                                                       ; 57      ;
 ; inst21                                                                                                                                       ; 44      ;
+; SW[15]                                                                                                                                       ; 43      ;
 ; cronometro:inst07|sec_units[0]~0                                                                                                             ; 38      ;
-; SW[15]                                                                                                                                       ; 37      ;
 ; ajuste_relogio:inst2|adjust                                                                                                                  ; 35      ;
 ; ajuste_relogio:inst19|adjust                                                                                                                 ; 35      ;
 ; inicial:inst00|modo_cronometro~0                                                                                                             ; 21      ;
@@ -1963,7 +1983,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|seconds[1]                                                                                                                 ; 12      ;
 ; fdiv:inst|clkout                                                                                                                             ; 12      ;
 ; cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|add_sub_3_result_int[4]~6  ; 12      ;
-; SW[8]                                                                                                                                        ; 11      ;
 ; cronometro:inst07|minutes[1]                                                                                                                 ; 11      ;
 ; relogio:inst03|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|add_sub_3_result_int[4]~6     ; 11      ;
 ; timer:inst18|lpm_divide:Div0|lpm_divide_vcm:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|add_sub_3_result_int[4]~6       ; 11      ;
@@ -2015,10 +2034,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|seconds[2]                                                                                                                 ; 8       ;
 ; cronometro:inst07|seconds[3]                                                                                                                 ; 8       ;
 ; cronometro:inst07|seconds[4]                                                                                                                 ; 8       ;
-; ajuste_relogio:inst19|count[0]                                                                                                               ; 8       ;
-; inicial:inst00|modo_timer~1                                                                                                                  ; 8       ;
-; ajuste_relogio:inst2|count[0]                                                                                                                ; 8       ;
-; inicial:inst00|modo_timer~0                                                                                                                  ; 8       ;
 ; inst20~0                                                                                                                                     ; 8       ;
 ; cronometro:inst07|Equal0~4                                                                                                                   ; 8       ;
 ; cronometro:inst07|seconds[0]                                                                                                                 ; 8       ;
@@ -2043,8 +2058,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; separador:inst13|Selector0~3                                                                                                                 ; 7       ;
 ; separador:inst13|Selector8~4                                                                                                                 ; 7       ;
 ; separador:inst13|Selector16~4                                                                                                                ; 7       ;
-; ajuste_relogio:inst2|adjust_final~0                                                                                                          ; 7       ;
-; ajuste_relogio:inst19|adjust_final~0                                                                                                         ; 7       ;
 ; cronometro:inst07|Equal1~2                                                                                                                   ; 7       ;
 ; cronometro:inst07|milliseconds[2]                                                                                                            ; 7       ;
 ; ajuste_relogio:inst2|horas[2]                                                                                                                ; 7       ;
@@ -2088,12 +2101,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro_centesimos:inst16|out_cent_sec_units[2]                                                                                           ; 7       ;
 ; cronometro_centesimos:inst16|out_cent_sec_units[1]                                                                                           ; 7       ;
 ; cronometro_centesimos:inst16|out_cent_sec_units[0]                                                                                           ; 7       ;
+; ajuste_relogio:inst2|horas[5]~2                                                                                                              ; 6       ;
+; ajuste_relogio:inst19|horas[5]~2                                                                                                             ; 6       ;
+; ajuste_relogio:inst2|minutos[5]~2                                                                                                            ; 6       ;
+; ajuste_relogio:inst19|minutos[5]~2                                                                                                           ; 6       ;
 ; cronometro:inst07|minutes[5]~6                                                                                                               ; 6       ;
-; ajuste_relogio:inst2|horas[5]~0                                                                                                              ; 6       ;
-; ajuste_relogio:inst19|horas[5]~0                                                                                                             ; 6       ;
-; ajuste_relogio:inst2|minutos[5]~0                                                                                                            ; 6       ;
-; ajuste_relogio:inst19|minutos[5]~0                                                                                                           ; 6       ;
 ; cronometro:inst07|Equal2~0                                                                                                                   ; 6       ;
+; ajuste_relogio:inst2|segundos[5]~1                                                                                                           ; 6       ;
+; ajuste_relogio:inst19|segundos[5]~0                                                                                                          ; 6       ;
 ; cronometro:inst07|milliseconds[9]                                                                                                            ; 6       ;
 ; ajuste_relogio:inst2|horas[1]                                                                                                                ; 6       ;
 ; relogio:inst03|hours[2]                                                                                                                      ; 6       ;
@@ -2129,17 +2144,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; relogio:inst03|sec_units[0]                                                                                                                  ; 6       ;
 ; timer:inst18|sec_units[0]                                                                                                                    ; 6       ;
 ; SW[6]                                                                                                                                        ; 5       ;
+; SW[8]                                                                                                                                        ; 5       ;
 ; relogio:inst03|hours[0]~3                                                                                                                    ; 5       ;
 ; relogio:inst03|hours~0                                                                                                                       ; 5       ;
 ; timer:inst18|hours[2]~1                                                                                                                      ; 5       ;
 ; cronometro:inst07|hours[4]~0                                                                                                                 ; 5       ;
 ; cronometro:inst07|Equal3~0                                                                                                                   ; 5       ;
+; ajuste_relogio:inst2|segundos[5]~0                                                                                                           ; 5       ;
+; ajuste_relogio:inst19|count[1]~0                                                                                                             ; 5       ;
 ; relogio:inst03|Equal2~0                                                                                                                      ; 5       ;
 ; ajuste_relogio:inst2|minutos[1]                                                                                                              ; 5       ;
 ; ajuste_relogio:inst19|minutos[1]                                                                                                             ; 5       ;
 ; relogio:inst03|sec_units~6                                                                                                                   ; 5       ;
 ; ajuste_relogio:inst2|segundos[1]                                                                                                             ; 5       ;
 ; ajuste_relogio:inst19|segundos[1]                                                                                                            ; 5       ;
+; ajuste_relogio:inst19|count[0]                                                                                                               ; 5       ;
+; ajuste_relogio:inst2|count[0]                                                                                                                ; 5       ;
 ; relogio:inst03|min_tens[1]                                                                                                                   ; 5       ;
 ; timer:inst18|min_tens[0]                                                                                                                     ; 5       ;
 ; relogio:inst03|min_units[1]                                                                                                                  ; 5       ;
@@ -2275,7 +2295,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[16]~6             ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[17]~5             ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[17]~4             ; 2       ;
+; ajuste_relogio:inst19|Decoder0~10                                                                                                            ; 2       ;
 ; ajuste_relogio:inst2|horas[0]                                                                                                                ; 2       ;
+; ajuste_relogio:inst2|Decoder0~10                                                                                                             ; 2       ;
 ; ajuste_relogio:inst19|horas[0]                                                                                                               ; 2       ;
 ; timer:inst18|Equal3~0                                                                                                                        ; 2       ;
 ; timer:inst18|min_tens[1]~3                                                                                                                   ; 2       ;
@@ -2289,6 +2311,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~29            ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~28            ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[22]~27            ; 2       ;
+; ajuste_relogio:inst19|Decoder0~9                                                                                                             ; 2       ;
+; ajuste_relogio:inst2|Decoder0~9                                                                                                              ; 2       ;
 ; relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~29               ; 2       ;
 ; relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~28               ; 2       ;
 ; relogio:inst03|lpm_divide:Mod2|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[22]~27               ; 2       ;
@@ -2298,6 +2322,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~29            ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[21]~28            ; 2       ;
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[22]~27            ; 2       ;
+; inicial:inst00|modo_timer~1                                                                                                                  ; 2       ;
+; inicial:inst00|modo_timer~0                                                                                                                  ; 2       ;
 ; cronometro:inst07|count[4]                                                                                                                   ; 2       ;
 ; cronometro:inst07|count[5]                                                                                                                   ; 2       ;
 ; cronometro:inst07|count[2]                                                                                                                   ; 2       ;
@@ -2423,15 +2449,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|StageOut[33]~95            ; 1       ;
 ; cronometro:inst07|lpm_divide:Div3|lpm_divide_aem:auto_generated|sign_div_unsign_klh:divider|alt_u_div_a2f:divider|StageOut[28]~94            ; 1       ;
 ; timer:inst18|hour_units~11                                                                                                                   ; 1       ;
+; ajuste_relogio:inst19|Decoder0~12                                                                                                            ; 1       ;
+; ajuste_relogio:inst2|Decoder0~12                                                                                                             ; 1       ;
 ; timer:inst18|min_units~13                                                                                                                    ; 1       ;
 ; timer:inst18|min_units~12                                                                                                                    ; 1       ;
+; ajuste_relogio:inst19|Decoder0~11                                                                                                            ; 1       ;
+; ajuste_relogio:inst2|Decoder0~11                                                                                                             ; 1       ;
 ; relogio:inst03|sec_units~11                                                                                                                  ; 1       ;
 ; relogio:inst03|sec_units~10                                                                                                                  ; 1       ;
 ; timer:inst18|sec_units~12                                                                                                                    ; 1       ;
 ; timer:inst18|sec_units~11                                                                                                                    ; 1       ;
 ; reset:inst02|count~1                                                                                                                         ; 1       ;
-; ajuste_relogio:inst2|adjust_final~1                                                                                                          ; 1       ;
-; ajuste_relogio:inst19|adjust_final~1                                                                                                         ; 1       ;
+; ajuste_relogio:inst2|adjust_final~0                                                                                                          ; 1       ;
+; ajuste_relogio:inst19|adjust_final~0                                                                                                         ; 1       ;
 ; reset:inst02|count~0                                                                                                                         ; 1       ;
 ; cronometro:inst07|milliseconds~5                                                                                                             ; 1       ;
 ; cronometro:inst07|milliseconds~4                                                                                                             ; 1       ;
@@ -2478,10 +2508,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|seconds~3                                                                                                                  ; 1       ;
 ; cronometro:inst07|seconds~2                                                                                                                  ; 1       ;
 ; cronometro:inst07|seconds~1                                                                                                                  ; 1       ;
-; ajuste_relogio:inst19|count[0]~1                                                                                                             ; 1       ;
-; ajuste_relogio:inst19|count[1]~0                                                                                                             ; 1       ;
-; ajuste_relogio:inst2|count[0]~1                                                                                                              ; 1       ;
-; ajuste_relogio:inst2|count[1]~0                                                                                                              ; 1       ;
 ; cronometro:inst07|count~5                                                                                                                    ; 1       ;
 ; cronometro:inst07|count~4                                                                                                                    ; 1       ;
 ; cronometro:inst07|count~3                                                                                                                    ; 1       ;
@@ -2695,9 +2721,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[18]~2             ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[15]~1             ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod2|lpm_divide_15m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_ive:divider|StageOut[15]~0             ; 1       ;
-; ajuste_relogio:inst19|hou_units[3]~0                                                                                                         ; 1       ;
 ; relogio:inst03|hour_units~0                                                                                                                  ; 1       ;
-; ajuste_relogio:inst2|hou_units[3]~0                                                                                                          ; 1       ;
 ; timer:inst18|hour_units~2                                                                                                                    ; 1       ;
 ; relogio:inst03|min_tens~4                                                                                                                    ; 1       ;
 ; relogio:inst03|Add3~2                                                                                                                        ; 1       ;
@@ -2806,10 +2830,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[17]~18            ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[18]~17            ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod1|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[18]~16            ; 1       ;
-; ajuste_relogio:inst19|min_units[3]~0                                                                                                         ; 1       ;
 ; relogio:inst03|min_units~0                                                                                                                   ; 1       ;
 ; ajuste_relogio:inst2|minutos[0]                                                                                                              ; 1       ;
-; ajuste_relogio:inst2|min_units[3]~0                                                                                                          ; 1       ;
 ; timer:inst18|min_units~4                                                                                                                     ; 1       ;
 ; ajuste_relogio:inst19|minutos[0]                                                                                                             ; 1       ;
 ; relogio:inst03|sec_tens~3                                                                                                                    ; 1       ;
@@ -2916,10 +2938,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[17]~18            ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[18]~17            ; 1       ;
 ; cronometro:inst07|lpm_divide:Mod0|lpm_divide_25m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_kve:divider|StageOut[18]~16            ; 1       ;
-; ajuste_relogio:inst19|sec_units[3]~0                                                                                                         ; 1       ;
+; ajuste_relogio:inst19|Decoder0~8                                                                                                             ; 1       ;
 ; relogio:inst03|sec_units~4                                                                                                                   ; 1       ;
 ; ajuste_relogio:inst2|segundos[0]                                                                                                             ; 1       ;
-; ajuste_relogio:inst2|sec_units[3]~0                                                                                                          ; 1       ;
+; ajuste_relogio:inst2|Decoder0~8                                                                                                              ; 1       ;
 ; timer:inst18|sec_units~4                                                                                                                     ; 1       ;
 ; ajuste_relogio:inst19|segundos[0]                                                                                                            ; 1       ;
 ; cronometro:inst07|Equal0~3                                                                                                                   ; 1       ;
@@ -2939,8 +2961,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; cronometro:inst07|milli_sec_units[2]                                                                                                         ; 1       ;
 ; cronometro_centesimos:inst16|out_cent_sec_units~1                                                                                            ; 1       ;
 ; cronometro:inst07|milli_sec_units[1]                                                                                                         ; 1       ;
-; cronometro_centesimos:inst16|out_cent_sec_units~0                                                                                            ; 1       ;
-; cronometro:inst07|milli_sec_units[0]                                                                                                         ; 1       ;
 +----------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -2949,89 +2969,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 1,244 / 94,460 ( 1 % ) ;
-; C16 interconnects           ; 42 / 3,315 ( 1 % )     ;
-; C4 interconnects            ; 483 / 60,840 ( < 1 % ) ;
-; Direct links                ; 439 / 94,460 ( < 1 % ) ;
+; Block interconnects         ; 1,225 / 94,460 ( 1 % ) ;
+; C16 interconnects           ; 40 / 3,315 ( 1 % )     ;
+; C4 interconnects            ; 498 / 60,840 ( < 1 % ) ;
+; Direct links                ; 479 / 94,460 ( < 1 % ) ;
 ; Global clocks               ; 2 / 16 ( 13 % )        ;
-; Local interconnects         ; 649 / 33,216 ( 2 % )   ;
-; R24 interconnects           ; 82 / 3,091 ( 3 % )     ;
-; R4 interconnects            ; 700 / 81,294 ( < 1 % ) ;
+; Local interconnects         ; 654 / 33,216 ( 2 % )   ;
+; R24 interconnects           ; 97 / 3,091 ( 3 % )     ;
+; R4 interconnects            ; 706 / 81,294 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.05) ; Number of LABs  (Total = 95) ;
+; Number of Logic Elements  (Average = 13.58) ; Number of LABs  (Total = 92) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 2                            ;
-; 2                                           ; 3                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 1                            ;
-; 4                                           ; 0                            ;
+; 4                                           ; 3                            ;
 ; 5                                           ; 2                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 6                            ;
-; 8                                           ; 5                            ;
-; 9                                           ; 3                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 3                            ;
+; 9                                           ; 2                            ;
 ; 10                                          ; 1                            ;
-; 11                                          ; 2                            ;
+; 11                                          ; 4                            ;
 ; 12                                          ; 1                            ;
-; 13                                          ; 2                            ;
-; 14                                          ; 8                            ;
-; 15                                          ; 6                            ;
-; 16                                          ; 52                           ;
+; 13                                          ; 4                            ;
+; 14                                          ; 4                            ;
+; 15                                          ; 7                            ;
+; 16                                          ; 55                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.32) ; Number of LABs  (Total = 95) ;
+; LAB-wide Signals  (Average = 1.38) ; Number of LABs  (Total = 92) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 38                           ;
-; 1 Clock                            ; 53                           ;
-; 1 Clock enable                     ; 27                           ;
+; 1 Async. clear                     ; 40                           ;
+; 1 Clock                            ; 50                           ;
+; 1 Clock enable                     ; 31                           ;
 ; 2 Async. clears                    ; 1                            ;
-; 2 Clock enables                    ; 5                            ;
-; 2 Clocks                           ; 1                            ;
+; 2 Clock enables                    ; 3                            ;
+; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 14.35) ; Number of LABs  (Total = 95) ;
+; Number of Signals Sourced  (Average = 14.87) ; Number of LABs  (Total = 92) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 3                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 5                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 3                            ;
+; 1                                            ; 2                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 2                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 3                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 3                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 2                            ;
-; 11                                           ; 3                            ;
+; 11                                           ; 4                            ;
 ; 12                                           ; 4                            ;
-; 13                                           ; 5                            ;
-; 14                                           ; 8                            ;
-; 15                                           ; 19                           ;
-; 16                                           ; 5                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 4                            ;
+; 15                                           ; 22                           ;
+; 16                                           ; 8                            ;
 ; 17                                           ; 5                            ;
 ; 18                                           ; 5                            ;
-; 19                                           ; 5                            ;
-; 20                                           ; 4                            ;
-; 21                                           ; 4                            ;
-; 22                                           ; 2                            ;
-; 23                                           ; 0                            ;
-; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 5                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 4                            ;
+; 23                                           ; 2                            ;
+; 24                                           ; 1                            ;
+; 25                                           ; 2                            ;
 ; 26                                           ; 2                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -3039,66 +3059,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.38) ; Number of LABs  (Total = 95) ;
+; Number of Signals Sourced Out  (Average = 7.67) ; Number of LABs  (Total = 92) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 4                            ;
-; 3                                               ; 7                            ;
-; 4                                               ; 7                            ;
-; 5                                               ; 9                            ;
-; 6                                               ; 9                            ;
-; 7                                               ; 20                           ;
-; 8                                               ; 4                            ;
-; 9                                               ; 8                            ;
-; 10                                              ; 2                            ;
-; 11                                              ; 6                            ;
-; 12                                              ; 4                            ;
-; 13                                              ; 4                            ;
-; 14                                              ; 3                            ;
-; 15                                              ; 0                            ;
+; 1                                               ; 6                            ;
+; 2                                               ; 3                            ;
+; 3                                               ; 8                            ;
+; 4                                               ; 5                            ;
+; 5                                               ; 5                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 15                           ;
+; 8                                               ; 14                           ;
+; 9                                               ; 6                            ;
+; 10                                              ; 5                            ;
+; 11                                              ; 5                            ;
+; 12                                              ; 8                            ;
+; 13                                              ; 1                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 2                            ;
 ; 16                                              ; 2                            ;
 ; 17                                              ; 1                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 1                            ;
+; 18                                              ; 1                            ;
+; 19                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.29) ; Number of LABs  (Total = 95) ;
+; Number of Distinct Inputs  (Average = 11.32) ; Number of LABs  (Total = 92) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 4                            ;
-; 3                                            ; 4                            ;
-; 4                                            ; 5                            ;
-; 5                                            ; 5                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 5                            ;
-; 8                                            ; 8                            ;
-; 9                                            ; 8                            ;
-; 10                                           ; 5                            ;
-; 11                                           ; 3                            ;
-; 12                                           ; 9                            ;
-; 13                                           ; 5                            ;
-; 14                                           ; 6                            ;
-; 15                                           ; 2                            ;
-; 16                                           ; 9                            ;
-; 17                                           ; 1                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 4                            ;
+; 5                                            ; 7                            ;
+; 6                                            ; 5                            ;
+; 7                                            ; 7                            ;
+; 8                                            ; 7                            ;
+; 9                                            ; 6                            ;
+; 10                                           ; 2                            ;
+; 11                                           ; 12                           ;
+; 12                                           ; 4                            ;
+; 13                                           ; 8                            ;
+; 14                                           ; 4                            ;
+; 15                                           ; 7                            ;
+; 16                                           ; 6                            ;
+; 17                                           ; 0                            ;
 ; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 2                            ;
+; 19                                           ; 3                            ;
+; 20                                           ; 0                            ;
 ; 21                                           ; 3                            ;
 ; 22                                           ; 1                            ;
-; 23                                           ; 1                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
 ; 25                                           ; 0                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 1                            ;
+; 28                                           ; 0                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
@@ -3138,10 +3157,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+----------------------+-------------------+
 ; Source Clock(s)      ; Destination Clock(s) ; Delay Added in ns ;
 +----------------------+----------------------+-------------------+
-; fdiv:inst|clkout,I/O ; fdiv:inst|clkout     ; 51.0              ;
-; fdiv:inst|clkout     ; SW[15]               ; 20.7              ;
-; I/O                  ; fdiv:inst|clkout     ; 10.0              ;
-; I/O                  ; CLOCK_50             ; 8.0               ;
+; fdiv:inst|clkout,I/O ; fdiv:inst|clkout     ; 18.5              ;
+; I/O                  ; CLOCK_50             ; 11.9              ;
+; I/O                  ; fdiv:inst|clkout     ; 7.7               ;
+; fdiv:inst|clkout,I/O ; CLOCK_50             ; 4.0               ;
+; fdiv:inst|clkout     ; SW[15]               ; 1.9               ;
+; I/O                  ; SW[15]               ; 1.8               ;
 +----------------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using either the TimeQuest Timing Analyzer or the Classic Timing Analyzer.
@@ -3152,38 +3173,31 @@ This will disable optimization of problematic paths and expose them for further 
 +--------------------------------+------------------------------------+-------------------+
 ; Source Register                ; Destination Register               ; Delay Added in ns ;
 +--------------------------------+------------------------------------+-------------------+
-; ajuste_relogio:inst19|count[1] ; ajuste_relogio:inst19|hou_units[0] ; 1.958             ;
-; ajuste_relogio:inst19|count[0] ; ajuste_relogio:inst19|hou_units[0] ; 1.958             ;
-; SW[15]                         ; timer:inst18|min_units[1]          ; 1.869             ;
-; SW[16]                         ; timer:inst18|min_units[1]          ; 1.869             ;
-; SW[17]                         ; timer:inst18|min_units[1]          ; 1.869             ;
-; SW[6]                          ; timer:inst18|min_units[1]          ; 1.869             ;
-; reset:inst02|reset_timer       ; timer:inst18|sec_tens[1]           ; 1.797             ;
-; ajuste_relogio:inst2|count[1]  ; ajuste_relogio:inst2|sec_units[0]  ; 1.539             ;
-; ajuste_relogio:inst2|count[0]  ; ajuste_relogio:inst2|min_units[0]  ; 1.539             ;
-; SW[8]                          ; ajuste_relogio:inst19|adjust_final ; 1.057             ;
-; ajuste_relogio:inst19|adjust   ; timer:inst18|sec_tens[3]           ; 0.898             ;
-; ajuste_relogio:inst19|horas[5] ; timer:inst18|hour_tens[2]          ; 0.856             ;
-; ajuste_relogio:inst19|horas[4] ; timer:inst18|hour_tens[2]          ; 0.856             ;
-; ajuste_relogio:inst19|horas[3] ; timer:inst18|hour_tens[2]          ; 0.856             ;
-; timer:inst18|min_units[0]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|min_units[1]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|min_units[2]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_tens[0]       ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_tens[3]       ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_tens[1]       ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_units[0]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_units[1]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_units[2]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_units[3]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|sec_tens[2]       ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|min_units[3]      ; timer:inst18|min_tens[2]           ; 0.704             ;
-; timer:inst18|min_tens[0]       ; timer:inst18|hours[0]              ; 0.306             ;
-; timer:inst18|min_tens[3]       ; timer:inst18|hours[0]              ; 0.306             ;
-; timer:inst18|min_tens[1]       ; timer:inst18|hours[0]              ; 0.306             ;
-; timer:inst18|min_tens[2]       ; timer:inst18|hours[0]              ; 0.306             ;
+; SW[15]                         ; ajuste_relogio:inst2|adjust_final  ; 1.496             ;
+; SW[16]                         ; ajuste_relogio:inst2|adjust_final  ; 1.478             ;
+; SW[17]                         ; ajuste_relogio:inst2|adjust_final  ; 1.478             ;
+; SW[6]                          ; timer:inst18|min_units[1]          ; 1.221             ;
+; reset:inst02|reset_timer       ; timer:inst18|min_units[0]          ; 0.868             ;
+; ajuste_relogio:inst2|count[0]  ; ajuste_relogio:inst2|horas[0]      ; 0.682             ;
+; ajuste_relogio:inst2|count[1]  ; ajuste_relogio:inst2|horas[0]      ; 0.682             ;
+; SW[8]                          ; ajuste_relogio:inst2|horas[0]      ; 0.682             ;
+; ajuste_relogio:inst19|adjust   ; timer:inst18|min_tens[3]           ; 0.430             ;
+; ajuste_relogio:inst19|count[1] ; ajuste_relogio:inst19|sec_units[0] ; 0.398             ;
+; ajuste_relogio:inst19|count[0] ; ajuste_relogio:inst19|sec_units[0] ; 0.397             ;
+; timer:inst18|min_units[0]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|min_units[1]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|min_units[2]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_tens[0]       ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_tens[3]       ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_tens[1]       ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_units[0]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_units[1]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_units[2]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_units[3]      ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|sec_tens[2]       ; timer:inst18|min_tens[2]           ; 0.059             ;
+; timer:inst18|min_units[3]      ; timer:inst18|min_tens[2]           ; 0.059             ;
 +--------------------------------+------------------------------------+-------------------+
-Note: This table only shows the top 30 path(s) that have the largest delay added for hold.
+Note: This table only shows the top 23 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -3557,7 +3571,7 @@ Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "VGA_R[9]" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_SYNC" is assigned to location or region, but does not exist in design
     Warning (15706): Node "VGA_VS" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
 Info (170191): Fitter placement operations beginning
@@ -3565,11 +3579,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 1% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 4% of the available device resources in the region that extends from location X11_Y12 to location X21_Y23
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
+    Info (170196): Router estimated peak interconnect usage is 5% of the available device resources in the region that extends from location X11_Y12 to location X21_Y23
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:03
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.63 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.84 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 75 output pins without output pin load capacitance assignment
     Info (306007): Pin "HEX0[6]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -3650,15 +3664,15 @@ Warning (306006): Found 75 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/PF.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 339 warnings
-    Info: Peak virtual memory: 4892 megabytes
-    Info: Processing ended: Wed Sep 18 08:35:14 2024
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4884 megabytes
+    Info: Processing ended: Thu Sep 19 16:37:03 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:05
 
 
 +----------------------------+

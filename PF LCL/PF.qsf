@@ -49,7 +49,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE coder7.sv
 set_global_assignment -name SYSTEMVERILOG_FILE relogio.sv
 set_global_assignment -name SYSTEMVERILOG_FILE reset.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cronometro.sv
-set_global_assignment -name SYSTEMVERILOG_FILE ajuste_timer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE timer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ajuste_relogio.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fdiv.sv
@@ -484,8 +483,10 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SYSTEMVERILOG_FILE segment_output.sv
 set_global_assignment -name BDF_FILE Teste.bdf
-set_global_assignment -name SYSTEMVERILOG_FILE play_pause.sv
 set_global_assignment -name SYSTEMVERILOG_FILE cronometro_centesimos.sv
+set_global_assignment -name VECTOR_WAVEFORM_FILE relogio.vwf
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/bedua/Downloads/Projeto final - LCL/PF LCL/relogio.vwf"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

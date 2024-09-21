@@ -3,43 +3,43 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : -14.220
-TNS   : -405.064
+Slack : -13.985
+TNS   : -408.874
 
 Type  : Slow Model Setup 'fdiv:inst|clkout'
-Slack : -6.019
-TNS   : -295.962
+Slack : -6.382
+TNS   : -287.353
 
 Type  : Slow Model Setup 'SW[15]'
-Slack : 1.721
+Slack : 0.886
 TNS   : 0.000
 
-Type  : Slow Model Hold 'SW[15]'
-Slack : -3.101
-TNS   : -14.651
-
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.525
-TNS   : -2.525
+Slack : -2.517
+TNS   : -2.517
+
+Type  : Slow Model Hold 'SW[15]'
+Slack : -1.694
+TNS   : -8.377
 
 Type  : Slow Model Hold 'fdiv:inst|clkout'
-Slack : -0.002
-TNS   : -0.004
+Slack : -0.028
+TNS   : -0.028
 
 Type  : Slow Model Recovery 'fdiv:inst|clkout'
-Slack : -4.021
-TNS   : -133.269
+Slack : -1.837
+TNS   : -103.276
 
 Type  : Slow Model Recovery 'CLOCK_50'
-Slack : -2.339
-TNS   : -149.459
+Slack : -1.826
+TNS   : -102.049
 
 Type  : Slow Model Removal 'CLOCK_50'
-Slack : 0.647
+Slack : 1.471
 TNS   : 0.000
 
 Type  : Slow Model Removal 'fdiv:inst|clkout'
-Slack : 1.690
+Slack : 1.578
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
@@ -55,43 +55,43 @@ Slack : -0.500
 TNS   : -103.000
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : -5.494
-TNS   : -127.581
+Slack : -5.454
+TNS   : -130.204
 
 Type  : Fast Model Setup 'fdiv:inst|clkout'
-Slack : -2.028
-TNS   : -81.879
+Slack : -2.179
+TNS   : -79.654
 
 Type  : Fast Model Setup 'SW[15]'
-Slack : 1.211
+Slack : 0.801
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.567
-TNS   : -3.138
+Slack : -1.563
+TNS   : -2.896
 
 Type  : Fast Model Hold 'SW[15]'
-Slack : -1.525
-TNS   : -7.342
+Slack : -0.841
+TNS   : -4.398
 
 Type  : Fast Model Hold 'fdiv:inst|clkout'
-Slack : -0.226
-TNS   : -2.559
+Slack : -0.262
+TNS   : -0.262
 
 Type  : Fast Model Recovery 'fdiv:inst|clkout'
-Slack : -1.712
-TNS   : -32.370
+Slack : -0.624
+TNS   : -19.150
 
 Type  : Fast Model Recovery 'CLOCK_50'
-Slack : -0.661
-TNS   : -38.577
+Slack : -0.382
+TNS   : -14.038
 
 Type  : Fast Model Removal 'CLOCK_50'
-Slack : 0.068
+Slack : 0.445
 TNS   : 0.000
 
 Type  : Fast Model Removal 'fdiv:inst|clkout'
-Slack : 0.578
+Slack : 0.636
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'

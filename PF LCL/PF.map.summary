@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Sep 18 08:35:03 2024
+Analysis & Synthesis Status : Successful - Thu Sep 19 16:36:50 2024
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : PF
 Top-level Entity Name : Teste
 Family : Cyclone II
-Total logic elements : 1,275
-    Total combinational functions : 1,233
+Total logic elements : 1,277
+    Total combinational functions : 1,235
     Dedicated logic registers : 216
 Total registers : 216
 Total pins : 94

@@ -9,10 +9,8 @@ module inicial(
     output reg modo_cronometro,
     output reg modo_timer,
     output reg modo_ajuste_relogio,
-    output reg modo_ajuste_timer,
+    output reg modo_ajuste_timer
 
-    output reg flag_ajuste_relogio,
-    output reg flag_ajuste_timer
 );
 
 reg [2:0] last_state;  // Armazenar o último estado baseado em SW2, SW1, SW0
@@ -33,9 +31,6 @@ always @(*) begin
     modo_ajuste_relogio = (SW2 == 1 && SW1 == 0 && SW0 == 0);
     modo_ajuste_timer = (SW2 == 1 && SW1 == 1 && SW0 == 0);
 
-    // Verifica transições para ativar flags de ajuste
-    flag_ajuste_relogio = (last_state == 3'b100 && {SW2, SW1, SW0} == 3'b000);
-    flag_ajuste_timer = (last_state == 3'b110 && {SW2, SW1, SW0} == 3'b010);
 end
 
 endmodule
