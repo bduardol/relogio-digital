@@ -3,45 +3,34 @@ Projeto de um relógio digital feito na matéria de Laboratório de circuito dig
 
 ---
 
-Todas as postas que ultilizava as chavez KEY[n] foram trocadas para chaves SW[n]. O motivo dessa troca é alguns bugs que estava ocorrendo ao usar os botões KEY.
+Todas as portas que utilizavam as chaves `KEY[n]` foram trocadas para chaves `SW[n]`. O motivo dessa troca são alguns bugs que estavam ocorrendo ao usar os botões `KEY`.
 
 As chaves são respectivamente:
 
-SW[17:15] = Controlador dos modos do sistema:
+`SW[17:15]` = Controlador dos modos do sistema:
 
+## MODOS:
 
-MODOS:
-
-Modo relógio:
-SW[17], SW[16], SW[15] = {0, 0, 0}
-Modo cronometro:
-SW[17], SW[16], SW[15] = {0, 0, 1}
-Modo timer:
-SW[17], SW[16], SW[15] = {0, 1, 0}
-Modo ajuste do relógio:
-SW[17], SW[16], SW[15] = {1, 0, 0}
-Modo ajuste do timer:
-SW[17], SW[16], SW[15] = {1, 1, 0}
+- **Modo relógio:** `SW[17]`, `SW[16]`, `SW[15]` = `{0, 0, 0}`
+- **Modo cronômetro:** `SW[17]`, `SW[16]`, `SW[15]` = `{0, 0, 1}`
+- **Modo timer:** `SW[17]`, `SW[16]`, `SW[15]` = `{0, 1, 0}`
+- **Modo ajuste do relógio:** `SW[17]`, `SW[16]`, `SW[15]` = `{1, 0, 0}`
+- **Modo ajuste do timer:** `SW[17]`, `SW[16]`, `SW[15]` = `{1, 1, 0}`
 
 ---
 
-Controles:
+## Controles:
 
-Reset:
-SW[6] = {1} // Se SW6 = 1 no modo cronometro, ele é reiniciado. Se SW6 = 1 durante 2s todo o sistema é reiniciado.
+- **Reset:** `SW[6] = {1}` // Se `SW6 = 1` no modo cronômetro, ele é reiniciado. Se `SW6 = 1` por 2s, todo o sistema é reiniciado.
+  
+- **Set:** `SW[8] = {1}` // Se `SW8 = 1`, na borda de subida, o valor é setado.
 
-Set:
-SW[8] = {1} // Se SW8 = 1, quando da borda de subida, o valor é setado.
+- **Stop/Start (running):** `SW[7] = {1}` // Se `SW7 = 1`, o sistema está em start; caso contrário, o sistema está em stop.
 
-Stop/Start(running):
-SW[7] = {1} // Se SW7 = 1, o sistema esta em start, o sistema esta em stop.
-
-Configuração das horas:
-{SW[5],SW[4],SW[3],SW[2],SW[1],SW[0]} definição da hora do relógio e da hora do timer
+- **Configuração das horas:** `{SW[5], SW[4], SW[3], SW[2], SW[1], SW[0]}` definição da hora do relógio e da hora do timer.
 
 ---
 
-Instruções para rodas o sistema:
+## Instruções para rodar o sistema:
 
-Os códigos são dividido em módulos, escritos em verilog. Para rodas o sistema completo, deve ser compilado e carregado na placa o arquivo Teste.bdf. Esse arquivo é o editor gráfico onde todos os componentes foram interligado, para funcionamento do sistema. As funcionalidades podem ser rodadas usando as chaves, como especificado a cima.
-
+Os códigos são divididos em módulos, escritos em Verilog. Para rodar o sistema completo, deve-se compilar e carregar na placa o arquivo `Teste.bdf`. Esse arquivo é o editor gráfico onde todos os componentes foram interligados para o funcionamento do sistema. As funcionalidades podem ser rodadas usando as chaves, conforme especificado acima.
